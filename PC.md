@@ -2,9 +2,11 @@
 
 ## Three main working parts:
 
+###
+![full CPU diagram](https://www.learncomputerscienceonline.com/wp-content/uploads/2019/05/Microprocessor.jpg)
+###
 ### Control Unit
 Fetches instructions and determines the meaning behind them.
-
 ### Arithmetic Logic Unit (ALU)
 - **Addition**: Electrical circuits flip bits on and off using logic gates.
 - **Comparisons**: Values are compared by subtracting them to check whether the result is negative.
