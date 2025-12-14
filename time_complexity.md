@@ -157,3 +157,15 @@ T_sum = 1 + 2*(n+1) + 2*n + 1 = 4n + 4 = C1*n + C2 = O(n)
 - **Big-O notation** helps us compare algorithms **independently of hardware**.  
 - Common complexities range from **$O(1)$** to **$O(2^n)$**.  
 - Understanding time complexity helps in **choosing efficient algorithms** for large inputs.
+
+# Other asymptotic notations
+## Big Omega $\Omega$ notation
+- Describes best-case scenario time complexity
+### Visual representation
+####
+![big omega notation](https://cdn.kastatic.org/ka-perseus-images/c02e6916d15bacae7a936381af8c6e5a0068f4fd.png)
+####
+## Big Theta $\Theta$ notation
+- Describes the average-case scenario time complexity 
+### Visual representation
+![Big theta notation](https://cdn.kastatic.org/ka-perseus-images/c14a48f24cae3fd563cb3627ee2a74f56c0bcef6.png)
