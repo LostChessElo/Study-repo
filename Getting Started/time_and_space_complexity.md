@@ -149,11 +149,60 @@ T_sum = 1 + 2*(n+1) + 2*n + 1 = 4n + 4 = C1*n + C2 = O(n)
 - **Number of statements:** Vary by language → not ideal.  
 - **Ideal:** Use **Big O notation**, comparing growth functions $f(n)$ independent of machine or language.
 
----
+### Counting Operations 
+- Understanding how to count operations will allow you to determine which algorithm to use to solve a problem 
+- Exact counts matter less than understanding the growth of a program, quadratically, linearly maybe even logarithmically
+### Counting In Simple Code
+- Consider a function that calculates an average
+```python
+def calculate_average():
+    a = 10          # 1 operation
+    b = 20          # 1 operation
+    c = 30          # 1 operation
+    sum_val = a + b + c  # 6 operations (read a, read b, read c, add twice, assign)
+    avg = sum_val / 3    # 3 operations (read sum_val, divide, assign)
+    return avg           # 1 operation
+# Total: 13 operations
+```
+### How Loops Multiply Operations
+- A loop runs its body multiple times. If the body contains $k$ operations and the loop runs $n$ times, the total operation count is approximately $n × k$.
+####
+![visual representation](https://algo.monster/courses/foundation/understanding-speed/operations-loop.svg)
+####
+- Consider a function that sums an array
+```python
+def sum_array(arr):
+    n = len(arr)      # 1 operation
+    total = 0         # 1 operation
+    for i in range(n):
+        total += arr[i]  # 3 operations per iteration
+    return total      # 1 operation
+# Total: 3n + 3 operations
+```
+### Nested Loops
+- Nested loops multiply operations across all levels. An outer loop running $n$ times with an inner loop running $n$ times creates $n × n$ iterations. If each iteration has $k$ operations, the total is $n × n × k$.
+#### 
+![Visual representation of counting nested for loops](https://algo.monster/courses/foundation/understanding-speed/operations-nested-grid.svg)
+####
+- Consider a function that prints all pairs from an array.
+```python
+def print_pairs(arr):
+    n = len(arr)        # 1 operation
+    for i in range(n):
+        for j in range(n):
+            print(arr[i], arr[j])  # 3 operations
+# Total: 3n² + 1 operations
+# n=5: 76 operations
+# n=10: 301 operations
+```
+> print() = 1 operation, and indexing the array counts as 1, therefore 3 operations happen. 
 
 ## Summary
 
 - Time complexity measures **how the number of operations grows with input size**, not actual runtime.  
+####
+![visual growth](https://algo.monster/courses/foundation/understanding-speed/operations-growth.svg)
+####
 - **Big-O notation** helps us compare algorithms **independently of hardware**.  
 - Common complexities range from **$O(1)$** to **$O(2^n)$**.  
 - Understanding time complexity helps in **choosing efficient algorithms** for large inputs.
