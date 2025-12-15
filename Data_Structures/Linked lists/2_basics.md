@@ -88,7 +88,7 @@ Nodes in a doubly linked list have **3 fields**:
 2. The **data** it stores
 3. A pointer to the **next node** (`next`)
 
-![Doubly node structure](image.png)
+![Doubly node structure](https://media.geeksforgeeks.org/wp-content/uploads/20250827100603409157/22.webp)
 
 ```python
 class Node:
