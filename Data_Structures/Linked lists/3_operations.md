@@ -455,4 +455,4 @@ else:
 - **Recursive approaches** are often more elegant but use $O(n)$ space due to the call stack
 - **Insertion at the beginning** is the most efficient operation at $O(1)$
 - **Most operations** require traversal, resulting in $O(n)$ time complexity
-- Always check for edge cases like empty lists or invalid positi
+- Always check for edge cases like empty lists or invalid positions.
